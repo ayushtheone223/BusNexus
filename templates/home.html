@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusNexus - School Fleet Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    .home-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 10;
+    }
+    .home-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 5%;
+    }
+    .home-hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      margin-top: -50px;
+    }
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #fff 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn-large {
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      border-radius: 12px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      background: rgba(34, 211, 238, 0.1);
+      color: var(--cyan);
+    }
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .feature-desc {
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <div class="home-container">
+    <nav class="home-nav">
+      <div class="sidebar-logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect x="2" y="8" width="24" height="14" rx="3" stroke="url(#grad1)" stroke-width="2"/>
+            <circle cx="8" cy="22" r="2.5" stroke="url(#grad1)" stroke-width="2"/>
+            <circle cx="20" cy="22" r="2.5" stroke="url(#grad1)" stroke-width="2"/>
+            <path d="M2 13h24" stroke="url(#grad1)" stroke-width="1.5"/>
+            <path d="M9 8V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" stroke="url(#grad1)" stroke-width="1.5"/>
+            <rect x="16" y="10" width="6" height="4" rx="1" fill="url(#grad1)" opacity="0.5"/>
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#22d3ee"/>
+                <stop offset="1" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name" style="font-size: 1.5rem;">BusNexus</span>
+        </div>
+      </div>
+      <a href="/login" class="btn btn-ghost">Login / Sign up</a>
+    </nav>
+
+    <main class="home-hero">
+      <h1 class="hero-title">Next-Gen School<br>Fleet Management</h1>
+      <p class="hero-subtitle">
+        Manage buses, routes, drivers, and students in real-time. BusNexus provides a unified dashboard to oversee your entire school transportation network with ease.
+      </p>
+      <div class="hero-buttons">
+        <a href="/login" class="btn btn-primary btn-large">Get Started Now</a>
+        <a href="#features" class="btn btn-ghost btn-large">Explore Features</a>
+      </div>
+    </main>
+
+    <section id="features" class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="12" rx="2"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+        </div>
+        <h3 class="feature-title">Live Capacity Tracking</h3>
+        <p class="feature-desc">Monitor seating capacity and bus occupancy in real-time across your entire fleet.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: rgba(168, 85, 247, 0.1); color: var(--purple);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3 class="feature-title">Driver Management</h3>
+        <p class="feature-desc">Keep track of driver assignments, contact details, and get alerts for upcoming license expirations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background: rgba(34, 197, 94, 0.1); color: var(--green);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <h3 class="feature-title">Route Optimization</h3>
+        <p class="feature-desc">Map out stops, estimate distances, and assign the right buses to the right geographical zones.</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
